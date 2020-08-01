@@ -44,13 +44,6 @@ var puzzles = [
 	]
 ];
 
-// console.log(puzzles[0])
-
-// var puzzle = [...puzzles[0]]
-// console.log(puzzle)
-// var solution = [...puzzles[0]]
-
-// sodokoSolver(solution)
 
 var solutions = [
 	[
