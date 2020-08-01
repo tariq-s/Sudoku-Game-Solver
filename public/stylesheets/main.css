@@ -1,0 +1,110 @@
+html, body {
+    height:100%;
+    width:100%;
+}
+ 
+.Container {
+	/* background-color: #101820FF; */
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+hr{
+	width: 300px;
+    height: 1px;
+    background-color: white;
+    border: none;
+    }
+
+.outer-container {
+	background-color: #222222;
+	height: 70vh;
+}
+
+.modal-content {
+	color: white;
+}
+.btn.h-btn, .btn.m-btn {
+	border: 1px solid #DAA03DFF;
+	color: #DAA03DFF;
+}
+
+.btn.h-btn:hover, .btn.m-btn:hover {
+	background-color: #DAA03DFF;
+	border: 1px solid white;
+	color: black;
+}
+
+#button-section button.btn.btn-secondary {
+	background-color: #222222;
+}
+
+#button-section button.btn.btn-secondary.active {
+	background-color: #101A1D;
+}
+
+.top {
+	text-align: center;
+	letter-spacing: 2px;
+	color: white;
+	background-color: #222222;
+}
+
+#game-table {
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+#button-section {
+	text-align: center;
+	height: 25vh;
+	/* background-color: #DAA03DFF; */
+	background: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	font-family: 'DM Sans', sans-serif;
+}
+
+.game-cell {
+	width: 40px;
+	border: thin solid #DAA03DFF;
+}
+
+.cell-value {
+	font-size: 1.5em;
+	font-family: 'DM Sans', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.pencil {
+	width: 100%;
+}
+
+.pencil-cell {
+	width: 12px;
+	font-size: 0.5em;
+	text-align: center;
+	color: white;
+	padding: 0;
+}
+
+.selected {
+	background-color: green;
+}
+
+.neighbour {
+	background-color: ;
+}
+
+button.btn-secondary {
+	border: 1px solid white;
+	border-radius: 10%;
+	background-color: #101820FF;
+	letter-spacing: 2px;
+	
+}

@@ -1,0 +1,103 @@
+<%- include("partials/header"); %>
+<div style="height: 5vh;"class="pt-2 pb-1 top">
+	<span class="pr-5 mistakes">Mistakes: <span>0</span>/3</span>
+	<span class="px-5 padding"> </span>
+	<span class="pl-5 time"><span id="mins"></span>:<span id="secs"></span></span>
+</div>
+<div
+	class="modal fade" pb-1 
+	id="staticBackdrop"
+	data-backdrop="static"
+	data-keyboard="false"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="staticBackdropLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content" style="background-color: black; border: 1px solid #DAA03DFF; color: #DAA03DFF">
+			<div class="modal-header d-flex justify-content-center">
+				<h5 class="modal-title" id="staticBackdropLabel">Game Over!</h5>
+			</div>
+			<div class="modal-body">
+				Sorry, you lost the game. You've made more than 2 mistakes.
+			</div>
+			<div class="modal-footer d-flex justify-content-around">
+				<a href="/solve" type="button" class="m-btn btn btn-outline-dark">New Game</a>
+				<a href="/solve" type="button" class="m-btn btn btn-outline-dark">Restart</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="outer-container d-flex justify-content-center align-items-center">
+	<table id="game-table">
+		<tbody>
+			<% for(var k=0; k<9; k++) { %>
+			<tr class="game-row">
+				<% for(var j=0; j<9; j++) { %>
+				<td class="game-cell">
+					<div class="cell-value"></div>
+					<table class="pencil">
+						<% for(var m=0; m<3; m++) { %>
+						<tr class="pencil-row r<%=m%>">
+							<% for(var n=0; n<3; n++) { %>
+							<td class="pencil-cell c<%=n%>"></td>
+							<% } %> <% } %>
+						</tr>
+					</table>
+				</td>
+				<% } %>
+			</tr>
+			<% } %>
+		</tbody>
+	</table>
+</div>
+<div id="button-section">
+	<div class="btn-toolbar d-flex justify-content-center">
+		<div style="max-width: 250px; width: 70%"class="opt btn-group">
+			<button style="margin: 2vh;"type="button" class="px-3 btn btn-secondary" onclick="this.blur();">
+				<i class="fa fa-eraser" aria-hidden="true"></i><br />
+				Erase
+			</button> 
+			<button style="margin: 2vh;"type="button" class="px-3 btn btn-secondary" onclick="this.blur();">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"></i><br />
+				Pencil
+			</button>
+		</div>
+	</div>
+
+	<div class="btn-toolbar pb-1 d-flex justify-content-center">
+		<div style="max-width: 450px; width: 80%"class="numbers btn-group">
+			<% for(var i=1; i<=9; i++) { %>
+			<button style="padding: 4%"type="button" class="btn btn-secondary" onclick="this.blur();">
+				<%= i %>
+			</button>
+			<% } %>
+		</div>
+	</div>
+</div>
+<div
+	class="modal fade"
+	id="staticBackdrop-end"
+	data-backdrop="static"
+	data-keyboard="false"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="staticBackdropLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content" style="background-color: black; border: 1px solid #DAA03DFF; color: #DAA03DFF">
+			<div class="modal-header d-flex justify-content-center">
+				<h5 class="modal-title" id="staticBackdropLabel">Good Job!</h5>
+			</div>
+			<div class="modal-body">
+				Congratulations! You've solved the puzzle.
+			</div>
+			<div class="modal-footer d-flex justify-content-around">
+				<a href="/" type="button" class="m-btn btn btn-outline-dark">Home</a>
+				<a href="/solve" type="button" class="m-btn btn btn-outline-dark">New Game</a>
+			</div>
+		</div>
+	</div>
+<%- include("partials/footer"); %>
