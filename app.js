@@ -18,10 +18,6 @@ app.get("/solve", function(req, res){
     res.render("solve", {puzzle: "", solution: ""});
 });
 
-// app.get("/duas/:id", function(req, res) {
-// 	res.render("show", {dua: duas[req.params.id]})
-// });
-
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The Server Has Started!");
