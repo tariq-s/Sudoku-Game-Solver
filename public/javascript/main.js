@@ -78,72 +78,6 @@ function possible(y, x, n) {
 	}
 	return true;
 }
-	
-// function solve(puzz) {
-// 	function rSolve() {
-// 		for (var y = 0; y < 9; y++) {
-// 			for (var x = 0; x < 9; x++) {
-// 				if (puzz[y][x] === 0) {
-// 					for (var n = 1; n < 10; n++) {
-// 						if (possible(y, x, n)) {
-// 							puzz[y][x] = n;
-// 							rSolve();
-							
-// 						}
-// 					}
-// 					// puzz[y][x] = 0;
-// 					return;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	rSolve();
-// 	return puzz;
-// }
-// solve(puzzles[0])
-// console.log(solve(puzzles[0]));
-
-// function solve(puzz) {
-	
-// 	function isValid(board, row, col, k) {
-// 		for (let i = 0; i < 9; i++) {
-// 			const m = 3 * Math.floor(row / 3) + Math.floor(i / 3);
-// 			const n = 3 * Math.floor(col / 3) + i % 3;
-// 			if (board[row][i] == k || board[i][col] == k || board[m][n] == k) {
-// 			  return false;
-// 			}
-// 		}
-// 		return true;
-// 	}
-
-// 	function sodokoSolver(data) {
-// 	  for (let i = 0; i < 9; i++) {
-// 		for (let j = 0; j < 9; j++) {
-// 		  if (data[i][j] === 0) {
-// 			for (let k = 1; k <= 9; k++) {
-// 			  if (isValid(data, i, j, k)) {
-// 				data[i][j] = k;
-// 			  if (sodokoSolver(data)) {
-// 			   return true;
-// 			  } else {
-// 			   data[i][j] = 0;
-// 			  }
-// 			 }
-// 		   }
-// 		   return false;
-// 		 }
-// 	   }
-// 	 }
-// 	 return true;
-// 	}
-// 	console.log(puzz);
-// 	sodokoSolver(puzz);
-// 	return puzz;
-// }
-// // console.log(puzzle);
-// var solution = solve(puzzle);
-// console.log(puzzle);
-// console.log(solution);
 
 var selectedCell = -1;
 var x, y;
@@ -167,30 +101,6 @@ for (var i = 0; i < cells.length; i++) {
 			}
 		});
 	}
-	
-	// if (cells[i].classList.contains("selected")) {
-	// 	var row = Math.floor(i / 9) * 9;
-	// 	for (var j = 0; j < 9; j++){
-	// 		if (row + j !== i)
-	// 			cells[row + j].classList.add("neighbour");
-	// 	}
-		
-	// 	var col = i % 9;
-	// 	for (var j = 0; j < 9; j++){
-	// 		if (j * 9 + col !== i)
-	// 			cells[row + col].classList.add("neighbour");
-	// 	}
-		
-	// 	var row0 = Math.floor(row / 3) * 3;
-	// 	var col0 = Math.floor(col / 3) * 3;
-		
-	// 	for (var j = 0; j < 3; j++) {
-	// 		for (var k = 0; k < 3; k++) {
-	// 			if (j * 9 + col !== i)
-	// 			cells[row0 + j * 9 + col0 + k].classList.add("neighbour");
-	// 		}
-	// 	}
-	// }
 };
 
 Erase.addEventListener("click", function() {
